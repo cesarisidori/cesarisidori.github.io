@@ -768,3 +768,16 @@ function exp_label_Zonasactuales_1_eval_expression(context) {
         return ('Zona ' + feature['Zona'] );
     }
 }
+
+
+function exp_label_ductos_existentes_3_eval_expression(context) {
+    // 'Cent. Zona ' || "CZ"
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return ('Cent. Zona ' + feature.properties['CZ'] );
+    } else {
+        return ('Cent. Zona ' + feature['CZ'] );
+    }
+}
